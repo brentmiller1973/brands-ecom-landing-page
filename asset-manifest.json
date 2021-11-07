@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/brands-ecom-landing-page/static/css/main.450db06f.chunk.css",
-    "main.js": "/brands-ecom-landing-page/static/js/main.7db155f5.chunk.js",
-    "main.js.map": "/brands-ecom-landing-page/static/js/main.7db155f5.chunk.js.map",
+    "main.js": "/brands-ecom-landing-page/static/js/main.a4ede0d0.chunk.js",
+    "main.js.map": "/brands-ecom-landing-page/static/js/main.a4ede0d0.chunk.js.map",
     "runtime-main.js": "/brands-ecom-landing-page/static/js/runtime-main.86b439c4.js",
     "runtime-main.js.map": "/brands-ecom-landing-page/static/js/runtime-main.86b439c4.js.map",
     "static/css/2.e393b517.chunk.css": "/brands-ecom-landing-page/static/css/2.e393b517.chunk.css",
@@ -41,6 +41,6 @@
     "static/css/2.e393b517.chunk.css",
     "static/js/2.ec05f66f.chunk.js",
     "static/css/main.450db06f.chunk.css",
-    "static/js/main.7db155f5.chunk.js"
+    "static/js/main.a4ede0d0.chunk.js"
   ]
 }
