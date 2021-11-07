@@ -26,9 +26,6 @@
   }
   .text-onlay {
     height: 80vh;
-    @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
-      height: 62vh;
-    }
     width: 100%;
     position: absolute;
     top: 0;
@@ -38,6 +35,12 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 32px;
+    @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+      height: auto;
+      bottom: 0;
+      top:auto;
+      padding-top:0;
+    }
 
     h1 {
       font-size: $font-size-xxxl;
