@@ -18,12 +18,10 @@ const Hero = () => {
             <div className="info-panel">
               <h1>All The Fall Things</h1>
               <p>Versatile. Slightly-cooler temps and light layers.</p>
-              <Slide bottom big delay={1000}>
-                <div className="buttonWrapper">
-                  <button className="heroBtn">Shop Women</button>
-                  <button className="heroBtn">Shop Men</button>
-                </div>
-              </Slide>
+              <div className="buttonWrapper">
+                <button className="heroBtn">Shop Women</button>
+                <button className="heroBtn">Shop Men</button>
+              </div>
             </div>
           </Fade>
         </div>
