@@ -1,0 +1,25 @@
+@import "../../../../scssframework/index";
+
+.xpmedia-brands-slide-card {
+  padding: 0 calculateRem(4);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    display: block;
+    text-decoration: none;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  h1.category {
+    font-size: $font-size-l;
+    line-height: calculateRem(24);
+    color: $eerie-black;
+    margin-top: map-get($spacers, 'xs');
+  }
+}

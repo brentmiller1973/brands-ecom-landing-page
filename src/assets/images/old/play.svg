@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="53px" viewBox="0 0 51 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>play</title>
+    <defs>
+        <path d="M6.38823557,0.599152191 C3.86470606,-0.942528227 0,0.553540137 0,4.36669043 L0,42.3248663 C0,45.7457546 3.59117672,47.8074125 6.38823557,46.0924071 L37.4470582,27.1178786 C40.2176464,25.4302404 40.22647,21.2704394 37.4470582,19.5828012 L6.38823557,0.599152191 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.610000014">
+        <g id="Landing-Page-Desktop---with-Nav" transform="translate(-691.000000, -3484.000000)">
+            <g id="play" transform="translate(691.000000, 3484.000000)">
+                <path d="M0,0 L51,0 L51,52.7272949 L0,52.7272949 L0,0 Z" id="play-(Background)"></path>
+                <g id="fill-black-+-fill-white-+-fill-blue-Mask" transform="translate(6.375000, 2.196960)">
+                    <path d="M6.38823557,0.599152191 C3.86470606,-0.942528227 0,0.553540137 0,4.36669043 L0,42.3248663 C0,45.7457546 3.59117672,47.8074125 6.38823557,46.0924071 L37.4470582,27.1178786 C40.2176464,25.4302404 40.22647,21.2704394 37.4470582,19.5828012 L6.38823557,0.599152191 Z" id="Mask" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#191919" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="fill-black" mask="url(#mask-2)" fill="#FFFFFF">
+                        <g transform="translate(-6.375000, -2.196960)">
+                            <path d="M0,0 L51,0 L51,52.7272949 L0,52.7272949 L0,0 Z"></path>
+                        </g>
+                    </g>
+                    <g id="fill-white" mask="url(#mask-2)" fill="#FFFFFF">
+                        <g transform="translate(-6.375000, -2.196960)">
+                            <path d="M0,0 L51,0 L51,52.7272949 L0,52.7272949 L0,0 Z"></path>
+                        </g>
+                    </g>
+                    <g id="fill-blue" mask="url(#mask-2)" fill="#FFFFFF">
+                        <g transform="translate(-6.375000, -2.196960)">
+                            <path d="M0,0 L51,0 L51,52.7272949 L0,52.7272949 L0,0 Z"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

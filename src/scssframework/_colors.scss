@@ -1,0 +1,63 @@
+// Color for branding prototype:
+
+$alto: #dadada;
+$black: #000000;
+$chicago: #575757;
+$eerie-black: #191919;
+$electric-violet: #7e08db;
+$white: #ffffff;
+$white-2: #ffffff73;
+
+
+// Colors
+//
+// The primary color can be overridden per website using the [Theme Setting](https://redirector.arcpublishing.com/alc/arc-products/themes/user-docs/theme-settings/) `primary-color`.
+//
+// Styleguide 3.0.0
+
+
+// Base Colors for the theme.
+//
+// NOTE: This is being deprecated. We are in the process of improving enhanced styles and using styled-components to achieve this composition.
+//
+// $primary-color - #1B6FA6; Primary color
+// $secondary-color - #1B6FA6; Placeholder for the future
+// $success-color - #00A321; Success color
+// $warning-color - #E07000; Warning color
+// $danger-color - #DB0A07; Danger color
+// $ui-light-gray - #DADADA; Light Gray
+// $ui-medium-gray - #575757; Medium gray
+// $ui-dark-gray - #191919; Dark gray
+// $border-rule-color - #DADADA; Border color (maps to $ui-light-gray)
+// $image-caption-rule-color - #9A9A9A;  Image caption color
+// $ui-primary-font-color - #191919; Primary font color (maps to $ui-dark-gray)
+// $ui-primary-header-color - #191919; Primary header color (maps to $ui-dark-gray)
+// $link-color - #1B6FA6; Link color (maps to $primary-color)
+//
+//
+// Styleguide 3.1.0
+$primary-color: #1b6fa6 !default;
+$secondary-color: $primary-color !default;
+$success-color: #00a321 !default;
+$warning-color: #e07000 !default;
+$danger-color: #db0a07 !default;
+$ui-light-gray: #dadada !default;
+$ui-medium-gray: #575757 !default;
+$ui-dark-gray: #191919 !default;
+$border-rule-color: $ui-light-gray !default;
+$image-caption-rule-color: #9a9a9a !default;
+$ui-primary-font-color: #191919 !default;
+$ui-primary-header-color: $ui-dark-gray !default;
+$link-color: $primary-color !default;
+$ui-dark-secondary-color: $ui-dark-gray;
+
+$ui-btn-white-color: #fff;
+$button-state-colors: (
+  success: $success-color,
+  warning: $warning-color,
+  danger: $danger-color,
+);
+
+
+
+

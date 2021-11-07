@@ -1,0 +1,15 @@
+@import "../../scssframework/index";
+
+
+.container.xpmedia-brands-landing-page-layout {
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

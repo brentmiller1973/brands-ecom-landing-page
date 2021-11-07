@@ -1,0 +1,31 @@
+// @import './variables';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400,700");
+
+@font-face {
+  font-family: "Arial-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/FontsFree-Net-arial-bold.ttf') format("truetype")
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:before, :after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-text-size-adjust: none;
+}
+
+@import "./scssframework/index";
+
+

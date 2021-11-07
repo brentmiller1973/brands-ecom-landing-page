@@ -1,0 +1,95 @@
+@import "../../scssframework/index";
+
+.xpmedia-brands-footer {
+  color: $white;
+  background-color: $eerie-black;
+  margin-top: map-get($spacers, 'xxxl');
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin-top: map-get($spacers, 'md');
+  }
+  font-size: $font-size-m;
+  font-weight: 400;
+  line-height: 2rem;
+  padding: map-get($spacers, 'xl');
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    .col-sm-12 {
+      margin-bottom: map-get($spacers, 'lg');
+    }
+  }
+
+  h1 {
+    font-size: $font-size-m;
+    font-weight: 700;
+    line-height: calculateRem(24px);
+  }
+
+  .footer-sign-up {
+    margin-top: map-get($spacers, 'sm');
+    & > * {
+      display: block;
+      margin-bottom: map-get($spacers, 'sm');
+    }
+    input.signUpInput {
+      padding: map-get($spacers, 'xs');
+      border: 1px solid $white;
+      border-radius: 2px;
+      color:$white;
+      background-color: $eerie-black;
+    }
+
+    button.signUpBtn {
+      border: 1px solid $white;
+      border-radius: 2px;
+      width: fit-content;
+      background-color: $eerie-black;
+      margin-top: map-get($spacers, 'xs');
+      margin-bottom: map-get($spacers, 'xs');
+      padding-left: map-get($spacers, 'sm');
+      padding-right: map-get($spacers, 'sm');
+      line-height: calculateRem(24px);
+      color: $white;
+      font-family: $primary-font-family;
+      font-size: $font-size-m;
+      font-style: normal;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $eerie-black;
+        border-radius: 2px;
+        border: none;
+        z-index: -2;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: $white;
+        transition: all .3s;
+        border-radius: 2px;
+        border: none;
+        z-index: -1;
+      }
+      &:hover {
+        color: $eerie-black;
+        border: 1px solid $white;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+@import "../../scssframework/index";
+
+.hero {
+  position: relative;
+  margin-bottom: map-get($spacers, 'lg');
+
+  .row {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+
+    .col-sm-xl-12.hero-image-wrapper {
+      height: calc(100vh - 100px);
+      // background-size: 100% 100%;  // Looks best until you shrink the height
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
+      @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+        height: calc(60vh - 100px);
+        background-attachment: initial;
+      }
+    }
+  }
+
+  .info-wrapper {
+    height: calc(100vh - 100px);
+    position: absolute;
+    @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+      height: auto;
+      position: inherit;
+    }
+    width: 100%;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .info-panel {
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+
+      h1, p {
+        color: $white;
+        font-family: $primary-font-family;
+        margin-bottom: map-get($spacers, 'lg');
+        @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+          color: $eerie-black;
+          margin-bottom: map-get($spacers, 'sm');
+        }
+      }
+
+      h1 {
+        font-size: $font-size-xxxxl;
+        line-height: $font-size-xxxxl;
+        text-align: center;
+
+        @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+          font-size: calculateRem(28px);
+          line-height: calculateRem(32px);
+        }
+      }
+
+      p {
+        font-size: $font-size-xxl;
+        text-align: center;
+        @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+          font-size: $font-size-xl;
+          line-height: calculateRem(24px);
+        }
+      }
+
+      div.buttonWrapper {
+        margin-top: map-get($spacers, 'lg');
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+          justify-content: space-around;
+          margin-top: map-get($spacers, 'sm');
+        }
+      }
+
+      button.heroBtn {
+        border: none;
+        border-radius: 4px;
+        background-color: $white;
+        padding: map-get($spacers, 'sm');
+        color: $eerie-black;
+        font-family: $primary-font-family;
+        font-size: $font-size-m;
+        font-style: normal;
+        font-weight: 700;
+        margin-right: map-get($spacers, 'lg');
+        @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+          background-color: $eerie-black;
+          color: $white;
+          margin-right: 0;
+        }
+        cursor: pointer;
+        transition: all .3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $white;
+          @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+            background-color: $eerie-black;
+          }
+          border-radius: 4px;
+          border: none;
+          z-index: -2;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background-color: $eerie-black;
+          @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+            background-color: $white;
+          }
+          transition: all .3s;
+          border-radius: 4px;
+          border: none;;
+          z-index: -1;
+        }
+        &:hover {
+          color: $white;
+          @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+            color: $eerie-black;
+          }
+          border: none;
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-indicator-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .scroll-indicator {
+      width: 32px;
+      height: auto;
+    }
+
+  }
+}

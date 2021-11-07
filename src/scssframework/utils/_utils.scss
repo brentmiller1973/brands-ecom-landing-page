@@ -1,0 +1,122 @@
+// Utils
+//
+// General utility classes to make life easier
+//
+// Styleguide 4.0.0
+
+
+
+// vertical-centered
+//
+// Leverages Flexbox to make element vertically centered.  Useful with col-*
+//
+// Markup:
+//   <div class="container" >
+//       <div class="row">
+//          <article class="col-xl-4 col-lg-4 col-md-4 col-sm-12 vertical-centered">
+//            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+//            <p>Enim facilisis gravida neque convallis a cras. Faucibus et molestie ac feugiat sed lectus. Tortor condimentum lacinia quis vel eros donec ac. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Egestas congue quisque egestas diam in arcu cursus euismod quis. Tristique magna sit amet purus gravida quis. Ac turpis egestas maecenas pharetra convallis posuere morbi. Dictum sit amet justo donec enim diam. Arcu non odio euismod lacinia at quis risus sed. Nulla malesuada pellentesque elit eget. Mi sit amet mauris commodo quis. Magna sit amet purus gravida quis blandit turpis cursus in. Cursus vitae congue mauris rhoncus. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula.</p>
+//          </article>
+//          <article class="col-xl-4 col-lg-4 col-md-4 col-sm-12 vertical-centered">
+//            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+//          </article>
+//          <article class="col-xl-4 col-lg-4 col-md-4 col-sm-12 vertical-centered">
+//            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+//            <p>Enim facilisis gravida neque convallis a cras. Faucibus et molestie ac feugiat sed lectus. Tortor condimentum lacinia quis vel eros donec ac. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Egestas congue quisque egestas diam in arcu cursus euismod quis. Tristique magna sit amet purus gravida quis. Ac turpis egestas maecenas pharetra convallis posuere morbi. Dictum sit amet justo donec enim diam. Arcu non odio euismod lacinia at quis risus sed. Nulla malesuada pellentesque elit eget. Mi sit amet mauris commodo quis. Magna sit amet purus gravida quis blandit turpis cursus in.</p>
+//          </article>
+//       </div>
+//   </div>
+//
+// Styleguide 4.1.0
+.vertical-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+//  sr-only
+//
+//  Utility class to hide content visually while keeping it screen reader-accessible.
+//
+//  Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+//
+// Markup:
+//  <button style="background: none;border: none;padding: 0;">
+//    <svg viewBox="0 0 32 32" width="32px" height="32px"
+//      aria-hidden="true" focusable="false">
+//      <path d="M21.602 15.955v4.65a.994.994 0
+//      01-.996.997h-4.651c-.888 0-1.332-1.075-.706-1.702l1.503-1.503-4.451-4.452-4.452 4.456L9.353 19.9c.627.627.182
+//      1.702-.706 1.702h-4.65A.994.994 0 013 20.606v-4.651c0-.889 1.075-1.333 1.702-.706l1.503 1.503
+//      4.454-4.451-4.454-4.455-1.503 1.507C4.075 9.98 3 9.536 3 8.647v-4.65A.994.994 0 013.997
+//      3h4.65c.888 0 1.333 1.075.706 1.702L7.85 6.206l4.451 4.45 4.452-4.455-1.504-1.499C14.623 4.075 15.067
+//      3 15.955 3h4.65a.994.994 0 01.997.997v4.65c0 .889-1.075 1.333-1.702.706L18.397 7.85 13.943 12.3l4.454
+//      4.455 1.503-1.503c.627-.63 1.702-.187 1.702.702z" fill="#6B6B6B" fill-rule="nonzero"></path>
+//    </svg>
+//    <span class="sr-only">Full Screen</span>
+//  </button>
+//
+// Styleguide 4.2.0
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+//  embed-responsive
+//
+//  Utility class for responsive embeds.  Used in  with one of the following classes:
+//  `embed-responsive-21by9`, `embed-responsive-16by9`, `embed-responsive-4by3`, `embed-responsive-1by1`
+//
+// Markup:
+// <div class="embed-responsive embed-responsive-16by9">
+//    <iframe width="480" height="270" src="https://www.youtube.com/embed/817CYL6KuGo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><
+//  </div>
+//
+// Styleguide 4.3.0
+.embed-responsive {
+  display: block;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.embed-responsive::before {
+  content: '';
+  display: block;
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  border: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.embed-responsive-21by9::before {
+  padding-top: 42.857143%;
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+  padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+  padding-top: 100%;
+}

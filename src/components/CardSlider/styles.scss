@@ -1,0 +1,31 @@
+@import "../../scssframework/index";
+
+.xpmedia-brands-card-slider {
+  padding-top:map-get($spacers, 'xxxl');
+  padding-left: 5%;
+  margin-right: 0;
+  padding-bottom: map-get($spacers, 'xxxl');
+  margin-bottom: map-get($spacers, 'lg');
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    padding-top: map-get($spacers, 'md');
+    padding-right: map-get($spacers, 'xs');
+    padding-left: map-get($spacers, 'xs');
+    padding-bottom: map-get($spacers, 'xs');
+  }
+
+  .slick-prev:before, .slick-next:before {
+    color: black;
+  }
+
+  .slick-next {
+    right: 15px;
+    z-index: 9;
+  }
+
+  .slick-prev {
+    left: 15px;
+    z-index: 9;
+  }
+
+}

@@ -1,0 +1,31 @@
+@import "../../scssframework/index";
+
+.xpmedia-brands-alert-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #191919;
+  height: 45px;
+  width: 100%;
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    height: 52px;
+  }
+
+  p {
+    letter-spacing: 0;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Work Sans", Helvetica, serif;
+    font-style: normal;
+    font-weight: 400;
+
+    @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+      font-size: calculateRem(14px);
+      line-height: calculateRem(16px);
+    }
+
+  }
+}

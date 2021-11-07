@@ -1,0 +1,69 @@
+@import "../../scssframework/index";
+
+.xpmedia-brands-video-promo {
+  margin-bottom: map-get($spacers, 'lg');
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  background-size: cover;
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin-top: map-get($spacers, 'md');
+    margin-bottom: map-get($spacers, 'md');
+    height: 62vh;
+  }
+
+  .background-video {
+    object-fit: cover;
+    height: 80vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+      height: 62vh;
+    }
+  }
+  .text-onlay {
+    height: 80vh;
+    @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+      height: 62vh;
+    }
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 90%);
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+
+    h1 {
+      font-size: $font-size-xxxl;
+      line-height: calculateRem(48);
+      margin-left: 8%;
+      @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+        font-size: calculateRem(24);
+        line-height: calculateRem(32);
+        margin-left: 1%;
+      }
+      margin-bottom: map-get($spacers, 'xs');
+    }
+    p {
+      max-width: 800px;
+      font-size: $font-size-l;
+      line-height: calculateRem(20);
+      margin-left: 8%;
+      @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+        font-size: calculateRem(16);
+        line-height: calculateRem(24);
+        margin-left: 1%;
+      }
+      a {
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+}

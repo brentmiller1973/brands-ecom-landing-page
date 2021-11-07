@@ -1,0 +1,24 @@
+@import "../../scssframework/index";
+
+.xpmedia-brands-product-grid {
+  margin-bottom: map-get($spacers, 'lg');
+  padding: map-get($spacers, 'xxxl');
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    padding: map-get($spacers, 'md') map-get($spacers, 'xs') map-get($spacers, 'xs');
+  }
+
+  .product-grid-header{
+    font-size: $font-size-xl;
+    color: $eerie-black
+  }
+
+  .row {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')){
+      grid-column-gap: 1rem;
+    }
+
+  }
+}
