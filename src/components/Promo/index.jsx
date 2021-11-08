@@ -13,7 +13,7 @@ const Promo = () => {
           style={{ backgroundImage: `url(${fallDays})` }}
         />
       </Fade>
-      <Slide bottom big>
+      <Slide bottom>
         <div className="container-fluid promo-text-container">
           <h1>Fall Days Ahead</h1>
           <div className="description">

@@ -11,7 +11,7 @@ const ProductGrid = () => {
     <section className="container-fluid xpmedia-brands-product-grid">
       <h1 className="product-grid-header">Best Sellers</h1>
       <div className="row">
-        <Slide bottom big>
+        <Slide bottom>
           <div className="col-sm-12 col-md-xl-4">
             <ProductCard
               img={BestSeller1}
@@ -20,7 +20,7 @@ const ProductGrid = () => {
             />
           </div>
         </Slide>
-        <Slide bottom big>
+        <Slide bottom>
           <div className="col-sm-12 col-md-xl-4">
             <ProductCard
               img={BestSeller2}
@@ -29,7 +29,7 @@ const ProductGrid = () => {
             />
           </div>
         </Slide>
-        <Slide bottom big>
+        <Slide bottom>
           <div className="col-sm-12 col-md-xl-4">
             <ProductCard
               img={BestSeller3}
