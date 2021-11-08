@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCard from "./children/ProductCard";
-import Slide from "react-reveal/Slide";
+import { Fade } from "react-awesome-reveal";
 import "./styles.scss";
 import BestSeller1 from "../../assets/images/BestSeller1@2X.jpg";
 import BestSeller2 from "../../assets/images/BestSeller2@2X.jpg";
@@ -11,7 +11,7 @@ const ProductGrid = () => {
     <section className="container-fluid xpmedia-brands-product-grid">
       <h1 className="product-grid-header">Best Sellers</h1>
       <div className="row">
-        <Slide bottom big>
+        <Fade>
           <div className="col-sm-12 col-md-xl-4">
             <ProductCard
               img={BestSeller1}
@@ -19,8 +19,8 @@ const ProductGrid = () => {
               price="$87"
             />
           </div>
-        </Slide>
-        <Slide bottom big>
+        </Fade>
+        <Fade>
           <div className="col-sm-12 col-md-xl-4">
             <ProductCard
               img={BestSeller2}
@@ -28,8 +28,8 @@ const ProductGrid = () => {
               price="$76"
             />
           </div>
-        </Slide>
-        <Slide bottom big>
+        </Fade>
+        <Fade>
           <div className="col-sm-12 col-md-xl-4">
             <ProductCard
               img={BestSeller3}
@@ -37,7 +37,7 @@ const ProductGrid = () => {
               price="$165"
             />
           </div>
-        </Slide>
+        </Fade>
       </div>
     </section>
   );

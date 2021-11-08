@@ -1,6 +1,5 @@
 import React from "react";
-import Slide from "react-reveal/Slide";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import "./styles.scss";
 import hero from "../../assets/images/Hero@2X.jpg";
 // import mouse from "../../assets/images/mouse.svg";

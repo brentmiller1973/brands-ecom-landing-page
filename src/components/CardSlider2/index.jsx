@@ -1,6 +1,5 @@
 import React from "react";
 import SlideCard from "./children/SlideCard";
-import Slide from "react-reveal/Slide";
 import "./styles.scss";
 import story1Img from "../../assets/images/Stories1@2X.jpg";
 import story2Img from "../../assets/images/Stories2@2X.jpg";

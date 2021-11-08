@@ -1,6 +1,5 @@
 import React from "react";
-import Slide from "react-reveal/Slide";
-import Fade from "react-reveal/Fade";
+import { Fade, Slide } from "react-awesome-reveal";
 import "./styles.scss";
 import fallDays from "../../assets/images/FallDaysAhead@2X.jpg";
 

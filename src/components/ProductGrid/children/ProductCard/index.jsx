@@ -1,5 +1,5 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import "./styles.scss";
 
 const ProductCard = ({ img, productName, price }) => {
@@ -8,7 +8,7 @@ const ProductCard = ({ img, productName, price }) => {
       <a href="#" title={productName}>
         <img alt={productName} src={img} />
       </a>
-      <Fade bottom>
+      <Fade>
         <div>{productName}</div>
         <div>{price}</div>
       </Fade>

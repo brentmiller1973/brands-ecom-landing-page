@@ -1,6 +1,5 @@
 import React from "react";
 import SlideCard from "./children/SlideCard";
-import Slide from "react-reveal/Slide";
 import "./styles.scss";
 import cat1Img from "../../assets/images/Category1@2X.jpg";
 import cat2Img from "../../assets/images/Category2@2X.jpg";
