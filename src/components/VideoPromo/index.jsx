@@ -6,7 +6,7 @@ import video from "../../assets/images/brand-video.mp4";
 const VideoPromo = () => {
   return (
     <section className="container-fluid xpmedia-brands-video-promo">
-      <video autoPlay loop muted className="background-video">
+      <video autoPlay playsinline loop muted className="background-video">
         <source src={video} type="video/mp4" />
       </video>
       <div className="text-onlay">
