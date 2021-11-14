@@ -15,7 +15,7 @@ import p4Img from "../../assets/images/Stories4@2X.jpg";
 import shop1 from "../../assets/images/menu/shop1.jpg";
 import "./styles.scss";
 
-const NavMenu = () => {
+const HeaderNav = () => {
   const menuRef = useRef();
   const menuMainRef = useRef();
   const goBackRef = useRef();
@@ -85,7 +85,7 @@ const NavMenu = () => {
 
   return (
     <header className="xpmedia-brands-header">
-      <div className="container">
+      <div className="xpmedia-brands-header-container">
         <div className="header-row v-center">
           <div className="header-item item-left">
             <div className="logo">
@@ -109,19 +109,12 @@ const NavMenu = () => {
                 menuMainClick(e);
               }}
             >
+              {/**
+
+               Begin the mobile nav
+
+               **/}
               <div className="mobile-menu-head">
-                <div className="mobile-menu-head-top">
-                  <div
-                    className="mobile-menu-close"
-                    ref={mobileMenuCloseRef}
-                    onClick={(e) => {
-                      toggleMenu();
-                    }}
-                  >
-                    &times;
-                  </div>
-                  <h1>Milos</h1>
-                </div>
                 <div
                   className="go-back"
                   ref={goBackRef}
@@ -129,14 +122,30 @@ const NavMenu = () => {
                     goBackClick(e);
                   }}
                 >
-                  <div className="go-back-arrow">
-                    <FontAwesomeIcon icon={faAngleLeft} />
-                  </div>
-
-                  <div className="current-menu-title" />
+                  <FontAwesomeIcon icon={faAngleLeft} />
+                </div>
+                <div className="current-menu-title" />
+                <div
+                  className="mobile-menu-close"
+                  ref={mobileMenuCloseRef}
+                  onClick={(e) => {
+                    toggleMenu();
+                  }}
+                >
+                  &times;
                 </div>
               </div>
+              {/**
 
+               End the mobile nav
+
+               **/}
+
+              {/**
+
+               Begin main menu
+
+               **/}
               <ul className="menu-main" ref={menuMainRef}>
                 <li className="menu-item-has-children">
                   <a href="#">
@@ -470,49 +479,23 @@ const NavMenu = () => {
                   </div>
                 </li>
               </ul>
+              {/**
+
+               End main menu
+
+               **/}
             </nav>
           </div>
           <div className="header-item item-right">
-            <ul className="menu-secondary">
-              <li className="menu-item-has-children">
-                <a href="#">
-                  <FontAwesomeIcon icon={faSearch} />
-                </a>
-                <div className="sub-menu mega-menu mega-menu-column-4">
-                  <div className="list-item text-center">
-                    <a href="#">
-                      <img src={p1Img} alt="new Product" />
-                      <h4 className="title">Product 1</h4>
-                    </a>
-                  </div>
-                  <div className="list-item text-center">
-                    <a href="#">
-                      <img src={p2Img} alt="new Product" />
-                      <h4 className="title">Product 2</h4>
-                    </a>
-                  </div>
-                  <div className="list-item text-center">
-                    <a href="#">
-                      <img src={p3Img} alt="new Product" />
-                      <h4 className="title">Product 3</h4>
-                    </a>
-                  </div>
-                  <div className="list-item text-center">
-                    <a href="#">
-                      <img src={p4Img} alt="new Product" />
-                      <h4 className="title">Product 4</h4>
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <a href="#">
-              <FontAwesomeIcon icon={faUser} />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon={faShoppingBag} />
-            </a>
+            {/*<a href="#">*/}
+            {/*  <FontAwesomeIcon icon={faSearch} />*/}
+            {/*</a>*/}
+            {/*<a href="#">*/}
+            {/*  <FontAwesomeIcon icon={faUser} />*/}
+            {/*</a>*/}
+            {/*<a href="#">*/}
+            {/*  <FontAwesomeIcon icon={faShoppingBag} />*/}
+            {/*</a>*/}
             <div
               className="mobile-menu-trigger"
               ref={menuTriggerRef}
@@ -529,4 +512,4 @@ const NavMenu = () => {
   );
 };
 
-export default NavMenu;
+export default HeaderNav;
