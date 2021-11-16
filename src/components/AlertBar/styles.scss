@@ -9,6 +9,7 @@
   width: 100%;
 
   @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    display: none;  // Don't show on mobile ?
     height: 52px;
   }
 
