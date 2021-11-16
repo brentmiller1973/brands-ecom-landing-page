@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/brands-ecom-landing-page/static/css/main.450db06f.chunk.css",
-    "main.js": "/brands-ecom-landing-page/static/js/main.9153da0b.chunk.js",
-    "main.js.map": "/brands-ecom-landing-page/static/js/main.9153da0b.chunk.js.map",
+    "main.css": "/brands-ecom-landing-page/static/css/main.dc4e1ea9.chunk.css",
+    "main.js": "/brands-ecom-landing-page/static/js/main.98330fb5.chunk.js",
+    "main.js.map": "/brands-ecom-landing-page/static/js/main.98330fb5.chunk.js.map",
     "runtime-main.js": "/brands-ecom-landing-page/static/js/runtime-main.86b439c4.js",
     "runtime-main.js.map": "/brands-ecom-landing-page/static/js/runtime-main.86b439c4.js.map",
     "static/css/2.e393b517.chunk.css": "/brands-ecom-landing-page/static/css/2.e393b517.chunk.css",
-    "static/js/2.ec05f66f.chunk.js": "/brands-ecom-landing-page/static/js/2.ec05f66f.chunk.js",
-    "static/js/2.ec05f66f.chunk.js.map": "/brands-ecom-landing-page/static/js/2.ec05f66f.chunk.js.map",
+    "static/js/2.ae7ea5cc.chunk.js": "/brands-ecom-landing-page/static/js/2.ae7ea5cc.chunk.js",
+    "static/js/2.ae7ea5cc.chunk.js.map": "/brands-ecom-landing-page/static/js/2.ae7ea5cc.chunk.js.map",
     "static/js/3.a54959f4.chunk.js": "/brands-ecom-landing-page/static/js/3.a54959f4.chunk.js",
     "static/js/3.a54959f4.chunk.js.map": "/brands-ecom-landing-page/static/js/3.a54959f4.chunk.js.map",
     "index.html": "/brands-ecom-landing-page/index.html",
     "static/css/2.e393b517.chunk.css.map": "/brands-ecom-landing-page/static/css/2.e393b517.chunk.css.map",
-    "static/css/main.450db06f.chunk.css.map": "/brands-ecom-landing-page/static/css/main.450db06f.chunk.css.map",
-    "static/js/2.ec05f66f.chunk.js.LICENSE.txt": "/brands-ecom-landing-page/static/js/2.ec05f66f.chunk.js.LICENSE.txt",
+    "static/css/main.dc4e1ea9.chunk.css.map": "/brands-ecom-landing-page/static/css/main.dc4e1ea9.chunk.css.map",
+    "static/js/2.ae7ea5cc.chunk.js.LICENSE.txt": "/brands-ecom-landing-page/static/js/2.ae7ea5cc.chunk.js.LICENSE.txt",
     "static/media/BestSeller1@2X.51683ad3.jpg": "/brands-ecom-landing-page/static/media/BestSeller1@2X.51683ad3.jpg",
     "static/media/BestSeller2@2X.cf3bb2ec.jpg": "/brands-ecom-landing-page/static/media/BestSeller2@2X.cf3bb2ec.jpg",
     "static/media/BestSeller3@2X.5859c3fd.jpg": "/brands-ecom-landing-page/static/media/BestSeller3@2X.5859c3fd.jpg",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.86b439c4.js",
     "static/css/2.e393b517.chunk.css",
-    "static/js/2.ec05f66f.chunk.js",
-    "static/css/main.450db06f.chunk.css",
-    "static/js/main.9153da0b.chunk.js"
+    "static/js/2.ae7ea5cc.chunk.js",
+    "static/css/main.dc4e1ea9.chunk.css",
+    "static/js/main.98330fb5.chunk.js"
   ]
 }
