@@ -111,6 +111,11 @@ const NavMenu = () => {
             >
               <div className="mobile-menu-head">
                 <div className="mobile-menu-head-top">
+                  <div className="logo">
+                    <a href="#">
+                      <img alt="Milos" className="logo" src={logo} />
+                    </a>
+                  </div>
                   <div
                     className="mobile-menu-close"
                     ref={mobileMenuCloseRef}
@@ -120,7 +125,6 @@ const NavMenu = () => {
                   >
                     &times;
                   </div>
-                  <h1>Milos</h1>
                 </div>
                 <div
                   className="go-back"
@@ -446,26 +450,26 @@ const NavMenu = () => {
                     <div className="list-item text-center">
                       <a href="#">
                         <img src={p1Img} alt="new Product" />
-                        <h4 className="title">Product 1</h4>
                       </a>
+                      <h4 className="title">Lorem ipsum</h4>
                     </div>
                     <div className="list-item text-center">
                       <a href="#">
                         <img src={p2Img} alt="new Product" />
-                        <h4 className="title">Product 2</h4>
                       </a>
+                      <h4 className="title">Excepteur sint occaecat</h4>
                     </div>
                     <div className="list-item text-center">
                       <a href="#">
                         <img src={p3Img} alt="new Product" />
-                        <h4 className="title">Product 3</h4>
                       </a>
+                      <h4 className="title">Duis aute irure</h4>
                     </div>
                     <div className="list-item text-center">
                       <a href="#">
                         <img src={p4Img} alt="new Product" />
-                        <h4 className="title">Product 4</h4>
                       </a>
+                      <h4 className="title">Ut enim ad minim</h4>
                     </div>
                   </div>
                 </li>
@@ -479,29 +483,8 @@ const NavMenu = () => {
                   <FontAwesomeIcon icon={faSearch} />
                 </a>
                 <div className="sub-menu mega-menu mega-menu-column-4">
-                  <div className="list-item text-center">
-                    <a href="#">
-                      <img src={p1Img} alt="new Product" />
-                      <h4 className="title">Product 1</h4>
-                    </a>
-                  </div>
-                  <div className="list-item text-center">
-                    <a href="#">
-                      <img src={p2Img} alt="new Product" />
-                      <h4 className="title">Product 2</h4>
-                    </a>
-                  </div>
-                  <div className="list-item text-center">
-                    <a href="#">
-                      <img src={p3Img} alt="new Product" />
-                      <h4 className="title">Product 3</h4>
-                    </a>
-                  </div>
-                  <div className="list-item text-center">
-                    <a href="#">
-                      <img src={p4Img} alt="new Product" />
-                      <h4 className="title">Product 4</h4>
-                    </a>
+                  <div className="container text-center">
+                    <h3>Algolia search plugin here</h3>
                   </div>
                 </div>
               </li>

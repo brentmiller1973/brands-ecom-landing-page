@@ -115,7 +115,7 @@
   background-color:#ffffff;
   padding: 20px 30px;
   margin-top:5px;
-  white-space: nowrap;
+  //white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   transition: transform .1s ease,opacity 0ms linear .1s,visibility 0ms linear .1s;
@@ -156,6 +156,7 @@
     opacity: 1;
     visibility: visible;
     transition: transform .25s ease,opacity 0ms,visibility 0ms;
+
   }
 
   .xpmedia-brands-header .menu > ul > li.menu-item-has-children:hover .sub-menu .list-item{
@@ -242,8 +243,12 @@
 }
 
 .xpmedia-brands-header  ul > li .sub-menu.mega-menu-column-4 > .list-item {
-  flex: 0 0 25%;
-  padding: 0 15px;
+  // flex: 0 0 25%;
+  // padding: 0 15px;
+  //flex: auto;
+  flex: 0 1 25%;
+  padding: 0 64px;
+  text-align: left;
 }
 
 .xpmedia-brands-header  ul > li .sub-menu.mega-menu-column-4 > .list-item .title {
@@ -254,9 +259,9 @@
   padding: 10px 0;
 }
 
-.xpmedia-brands-header  ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title {
-  text-align: center;
-}
+//.xpmedia-brands-header  ul > li .sub-menu.mega-menu-column-4 > .list-item.text-center .title {
+//  text-align: center;
+//}
 
 .xpmedia-brands-header  ul > li .sub-menu.mega-menu-column-4 > .list-item img {
   max-width: 100%;
@@ -279,6 +284,7 @@
 .xpmedia-brands-header .item-center .menu-main > li:hover {
   border-bottom: 2px solid #000000;
 }
+
 
 .mobile-menu-head,
 .mobile-menu-trigger {
@@ -364,6 +370,10 @@
     transform: translate(0%);
   }
 
+  .xpmedia-brands-header .item-center .menu-main > li:hover {
+    border-bottom: transparent;
+  }
+
   .xpmedia-brands-header .menu > ul > li {
     line-height: 1;
     margin: 0;
@@ -410,6 +420,9 @@
     width: 100%;
   }
 
+  .xpmedia-brands-header .menu .mobile-menu-head .mobile-menu-head-top .logo {
+    margin-left: 10px;
+  }
   .xpmedia-brands-header .menu .mobile-menu-head .go-back {
     //height: 50px;
     //width: 50px;
@@ -451,7 +464,7 @@
   .xpmedia-brands-header .menu .mobile-menu-head .mobile-menu-close {
     height: 50px;
     width: 50px;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    // border-left: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
     line-height: 50px;
     text-align: center;
@@ -472,12 +485,11 @@
     position: absolute;
     box-shadow: none;
     margin: 0;
-    padding: 15px;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding-top: 65px;
+    padding: 110px 15px 15px;
     max-width: none;
     min-width: auto;
     display: none;
