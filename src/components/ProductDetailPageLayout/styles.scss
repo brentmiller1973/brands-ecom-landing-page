@@ -1,0 +1,24 @@
+@import "../../scssframework/index";
+
+.container.xpmedia-brands-product-detail-page-layout {
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: map-get($spacers, 'lg');
+
+    @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: map-get($spacers, 'xs');
+    }
+  }
+
+}
+

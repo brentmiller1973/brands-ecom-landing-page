@@ -12,7 +12,9 @@ import p1Img from "../../assets/images/Stories1@2X.jpg";
 import p2Img from "../../assets/images/Stories2@2X.jpg";
 import p3Img from "../../assets/images/Stories3@2X.jpg";
 import p4Img from "../../assets/images/Stories4@2X.jpg";
-import shop1 from "../../assets/images/menu/shop1.jpg";
+import searchIcon from "../../assets/icons/search.svg";
+import userIcon from "../../assets/icons/user.svg";
+import shoppingBagIcon from "../../assets/icons/shopping-bag.svg";
 import "./styles.scss";
 
 const NavMenu = () => {
@@ -480,7 +482,7 @@ const NavMenu = () => {
             <ul className="menu-secondary">
               <li className="menu-item-has-children">
                 <a href="#">
-                  <FontAwesomeIcon icon={faSearch} />
+                  <img alt="search" src={searchIcon} />
                 </a>
                 <div className="sub-menu mega-menu mega-menu-column-4">
                   <div className="container text-center">
@@ -488,14 +490,18 @@ const NavMenu = () => {
                   </div>
                 </div>
               </li>
+              <li>
+                <a href="#">
+                  <img alt="Profile" src={userIcon} />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="Shopping cart" src={shoppingBagIcon} />
+                </a>
+              </li>
             </ul>
 
-            <a href="#">
-              <FontAwesomeIcon icon={faUser} />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon={faShoppingBag} />
-            </a>
             <div
               className="mobile-menu-trigger"
               ref={menuTriggerRef}

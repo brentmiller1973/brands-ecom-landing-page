@@ -1,0 +1,70 @@
+@import "../../scssframework/index";
+
+.accordion {
+  //border: 1px solid rgba(0, 0, 0, 0.1);
+  //border-radius: 2px;
+
+}
+
+.accordion__item + .accordion__item {
+  //border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  font-size: 14px;
+  text-align: left;
+  border: none;
+  position: relative;
+  border-bottom: 1px solid $alto;
+}
+
+.accordion__button:hover {
+  // background-color: #ddd;
+}
+
+.accordion__button:after {
+  display: inline-block;
+  float: right;
+  content: '';
+  height: 15px;
+  width: 15px;
+  margin-left: 12px;
+  border-bottom: 4px solid currentColor;
+  border-right: 4px solid currentColor;
+  transform: rotate(45deg);
+}
+
+.accordion__button[aria-expanded='true']::after,
+.accordion__button[aria-selected='true']::after {
+  transform: rotate(222deg);
+}
+
+[hidden] {
+  display: none;
+}
+
+.accordion__panel {
+  padding: 20px;
+  animation: fadein 0.35s ease-in;
+  color: $chicago;
+  font-size: 12px;
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

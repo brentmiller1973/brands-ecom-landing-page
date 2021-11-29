@@ -1,0 +1,50 @@
+@import "../../scssframework/index";
+
+.product-qty-container {
+  border: 1px solid $alto;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 45px;
+  max-width: 100px;
+}
+
+.product-qty-container .btn-qty {
+  background: none;
+
+  text-transform: none;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  border: 1px solid transparent;
+  touch-action: manipulation;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.product-qty-container .btn-qty.remove {
+  line-height: 42px;
+  margin-right: 0;
+  padding: 6px;
+  width: 30%;
+}
+
+.product-qty-container .btn-qty.input {
+  font-size: 16px;
+  margin-right: 0;
+  padding: 6px;
+  width: 40%;
+  cursor: inherit;
+}
+
+.product-qty-container .btn-qty.add {
+  line-height: 42px;
+  margin-right: 0;
+  padding: 6px;
+  width: 30%;
+}

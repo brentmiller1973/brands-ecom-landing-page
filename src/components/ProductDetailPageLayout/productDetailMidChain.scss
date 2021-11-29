@@ -1,0 +1,90 @@
+@import "../../scssframework/index";
+$product-detail-mid-chain-gap: map-get($spacers, 'lg');
+$product-detail-mid-chain-gap-mobile: map-get($spacers, 'sm');
+
+.product-detail-mid-chain {
+  width:100%;
+  margin-bottom: map-get($spacers, 'xl');
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')){
+    margin-bottom: 0;
+  }
+}
+
+section.product-detail-promo {
+  padding-bottom: map-get($spacers, 'xl');
+  //@media screen and (max-width: map-get($grid-breakpoints-max, 'md')){
+  //  &:last-of-type {
+  //    padding-bottom: map-get($spacers, 'md');
+  //  }
+  //}
+
+  display: grid;
+  grid-gap: $product-detail-mid-chain-gap;
+  grid-template-rows: auto;
+  grid-template-columns: 55% 1fr;
+  grid-template-areas:
+      "area1 area2";
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    grid-gap: $product-detail-mid-chain-gap-mobile;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "area1"
+      "area2";
+  }
+
+  .product-detail-promo-img {
+    grid-area: area1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .product-detail-promo-description {
+    grid-area: area2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      color: $black;
+      font-size: $font-size-xxxl;
+      line-height: $font-size-xxxl;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      color: $chicago;
+      font-size: $font-size-m;
+      line-height: 1.5rem;
+    }
+
+    @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+      h1, p {
+        padding: map-get($spacers, 'xs') map-get($spacers, 'sm');
+      }
+
+      h1 {
+        font-size: $font-size-xl;
+        line-height: $font-size-xl;
+        margin-bottom: .5rem;
+      }
+    }
+  }
+
+}
+
+section.product-detail-promo.reverse {
+  grid-template-columns: 1fr 55%;
+  grid-template-areas:
+      "area2 area1";
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "area1"
+      "area2";
+  }
+}

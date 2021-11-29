@@ -1,0 +1,348 @@
+@import "../../scssframework/index";
+$product-detail-top-chain-gap: map-get($spacers, 'md');
+$product-detail-top-chain-gap-mobile: map-get($spacers, 'xs');
+
+.product-detail-top-chain {
+  border-bottom: 1px solid $alto;
+  padding-bottom: map-get($spacers, 'xl');
+  margin-bottom: map-get($spacers, 'xl');
+
+  width:100%;
+  display: grid;
+  grid-gap: $product-detail-top-chain-gap;
+  grid-template-areas:
+      "imggrid head"
+      "imggrid  detail";
+  grid-template-rows: minmax(0, auto) ;
+  grid-template-columns: 55% 1fr;
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    border-bottom: none;
+    margin-bottom: 0;
+    grid-template-areas: "head"
+                              "imggrid"
+                              "detail";
+    grid-template-columns: 1fr;
+    grid-gap:$product-detail-top-chain-gap-mobile;
+    padding-bottom: map-get($spacers, 'sm');;
+  }
+}
+
+.product-detail-image-grid-mobile {
+  grid-area: imggrid;
+  width: 100%;
+  height:300px;
+  & > div {
+    width: 100vw;
+  }
+  @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+    //grid-template-columns: 1fr;
+    display: none;
+  }
+}
+
+.product-detail-image-grid {
+  grid-area: imggrid;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    //grid-template-columns: 1fr;
+    display: none;
+  }
+  gap: map-get($spacers, 'sm');
+
+  img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+  }
+}
+
+section.product-detail-head {
+  width: 100%;
+  grid-area: head;
+  height: fit-content;
+
+  padding-bottom: map-get($spacers, 'md');
+  border-bottom: 1px solid $alto;
+
+  & > * {
+    margin-bottom: map-get($spacers, 'xs');
+  }
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    border-bottom: none;
+    padding: map-get($spacers, 'sm');
+  }
+
+  .product-breadcrumbs {
+    font-size: 12px;
+    line-height: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    color: $eerie-black;
+  }
+
+  .product-name-and-price {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    h1{
+      color: $black;
+      font-size: $font-size-xxl;
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 32px;
+      text-transform: capitalize;
+    }
+    .price {
+      color: $black;
+      font-size: $font-size-xl;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 32px;
+    }
+  }
+
+  .review-summary{
+    display: flex;
+    align-content: center;
+
+    img.star {
+      margin-right: map-get($spacers, 'xxs');
+    }
+    img.star:last-of-type {
+      margin-right: map-get($spacers, 'sm');;
+    }
+
+    span {
+      color: $eerie-black;;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+    }
+  }
+}
+
+.product-detail-additional {
+  grid-area: detail;
+  margin-top: -$product-detail-top-chain-gap;
+
+  h1.product-detail-section-heading {
+    color: $black;
+    font-size: $font-size-sm;
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+section.product-detail-swatch {
+  border-bottom: 1px solid $alto;
+  padding-bottom: map-get($spacers, 'md');
+
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin: map-get($spacers, 'md') map-get($spacers, 'sm') map-get($spacers, 'sm');;
+  }
+
+  .swatch-row {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+
+    button {
+      height: 28px;
+      width: 28px;
+      margin-right: map-get($spacers, 'sm');
+      border:transparent;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      &:hover{
+        transform: scale(1.4);
+      }
+    }
+  }
+}
+
+section.product-detail-selection {
+  border-bottom: 1px solid $alto;
+  padding-bottom: map-get($spacers, 'md');
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin: map-get($spacers, 'sm');
+  }
+  .selection-row {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      display:flex;
+    }
+
+    ul li{
+      color: $chicago;
+      display: block;
+      position: relative;
+      margin-right:.5em;
+    }
+
+    ul li input[type=radio]{
+      position: absolute;
+      visibility: hidden;
+    }
+
+    ul li .check{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $alto;
+      border-radius: 4px;
+      transition: all .25s linear;
+    }
+
+    ul li:hover .check {
+      border: 1px solid $black;
+    }
+
+    input[type=radio]:checked ~ .check {
+      border: 1px solid $black;
+      background-color: $black;
+    }
+
+    input[type=radio]:checked ~ .check label{
+      color: white;
+    }
+
+    ul li label{
+      padding: 0 1rem;
+      width:100%;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 2rem;
+      cursor: pointer;
+      -webkit-transition: all 0.25s linear;
+      text-align: center;
+    }
+
+    ul li:hover label{
+      color: $black;
+      transform: scale(1.4);
+    }
+
+    ul li:hover input[type=radio]:checked label{
+      color: white;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: $black;
+    font-size: 12px;
+    margin-top: map-get($spacers, 'sm');
+    display: block;
+  }
+}
+
+section.product-detail-quantity-and-add {
+  border-bottom: 1px solid $alto;
+  padding-bottom: map-get($spacers, 'md');
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin: map-get($spacers, 'sm');
+  }
+  label {
+    display: block;
+    margin-bottom: map-get($spacers, 'xs');
+    font-size: 14px;
+    line-height: 3em;
+    color: $black;
+  }
+  select {
+    padding: 8px;
+    border: 1px solid $alto;
+    border-radius: 4px;
+    min-width: 55px;
+  }
+  button.addToCartBtn {
+    border: 1px solid $eerie-black;
+    border-radius: 4px;
+    width: 100%;
+    background-color: $eerie-black;
+    margin-top: map-get($spacers, 'md');
+    padding: 0.75rem;
+    line-height: calculateRem(24px);
+    color: $white;
+    font-family: $primary-font-family;
+    font-size: $font-size-m;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $eerie-black;
+      border-radius: 2px;
+      border: none;
+      z-index: -2;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: $white;
+      transition: all .3s;
+      border-radius: 2px;
+      border: none;
+      z-index: -1;
+    }
+    &:hover {
+      color: $eerie-black;
+      border: 1px solid $alto;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+section.product-detail-text-detail,
+section.product-detail-text-description {
+  border-bottom: 1px solid $alto;
+  padding-bottom: map-get($spacers, 'md');
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin: map-get($spacers, 'sm');
+  }
+  h1 {
+    color: $eerie-black;
+    font-size: 14px;
+  }
+  p {
+    color: $chicago;
+    font-size: 12px;
+  }
+}
+
+section.product-detail-info-accordion {
+  //border-bottom: 1px solid $alto;
+  //padding-bottom: map-get($spacers, 'md');
+  @media screen and (max-width: map-get($grid-breakpoints-max, 'md')) {
+    margin: map-get($spacers, 'sm');
+  }
+}

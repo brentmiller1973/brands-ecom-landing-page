@@ -51,6 +51,14 @@
   justify-content: flex-end;
 }
 
+.xpmedia-brands-header .item-right > ul {
+  display: flex;
+}
+
+.xpmedia-brands-header .item-right > ul > li {
+  margin: 0 8px;
+}
+
 .xpmedia-brands-header .item-right a {
   text-decoration: none;
   font-size: 16px;
