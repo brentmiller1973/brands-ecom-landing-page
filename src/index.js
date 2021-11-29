@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import "./index.scss";
 // import App from "./App";
 import LandingPageLayout from "./components/LandingPageLayout";
@@ -9,16 +9,21 @@ import reportWebVitals from "./reportWebVitals";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<LandingPageLayout />} />
-      <Route path="/brands-ecom-landing-page" element={<LandingPageLayout />} />
+  <HashRouter>
+    <Switch>
+      <Route exact path="/" component={LandingPageLayout} />
       <Route
-        path="/brands-ecom-product-detail-page"
-        element={<ProductDetailPageLayout />}
+        exact
+        path="/brands-ecom-landing-page"
+        component={LandingPageLayout}
       />
-    </Routes>
-  </BrowserRouter>,
+      <Route
+        exact
+        path="/brands-ecom-product-detail-page"
+        component={ProductDetailPageLayout}
+      />
+    </Switch>
+  </HashRouter>,
   rootElement
 );
 
